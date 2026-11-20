@@ -1,0 +1,218 @@
+
+# ==================================================
+# VISUAL STUDIO CODE
+# ==================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# ==================================================
+# VISUAL STUDIO
+# ==================================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.sdf
+*.opensdf
+ipch/
+
+# ==================================================
+# C# / .NET
+# ==================================================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.meta
+*.obj
+*.tmp_proj
+*.log
+*.tlog/
+*.lastbuildstate
+
+# .NET generated files
+project.lock.json
+project.fragment.lock.json
+TestResults/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# ==================================================
+# ASP.NET / ASP.NET CORE
+# ==================================================
+
+# Published output
+publish/
+wwwroot/dist/
+wwwroot/build/
+
+# Generated files
+ScaffoldingReadMe.txt
+GeneratedFiles/
+
+# IIS Express
+.config/
+*.config.user
+
+# User secrets
+secrets.json
+
+# ==================================================
+# ENTITY FRAMEWORK CORE
+# ==================================================
+
+# IMPORTANT:
+# Keep Migrations/ and all migration .cs files!
+# Keep ModelSnapshot.cs files!
+
+# Local database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ==================================================
+# MICROSOFT SQL SERVER
+# ==================================================
+
+# SQL Server database files
+*.mdf
+*.ldf
+*.ndf
+
+# Database backups
+*.bak
+*.trn
+*.dump
+
+# SQL Server temporary files
+*.mdf_mssql_*
+*.ldf_mssql_*
+
+# SQL Server Management Studio
+*.sqlplan
+*.sqlplan.user
+
+# SQL Server Data Tools
+*.dbmdl
+*.jfm
+
+# SQL Server Profiler
+*.trc
+
+# Deployment / export artifacts
+*.dacpac
+*.bacpac
+
+# ==================================================
+# REACT / VITE / NODE.JS
+# ==================================================
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager caches
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+
+# TypeScript
+*.tsbuildinfo
+
+# ==================================================
+# JAVASCRIPT / TYPESCRIPT
+# ==================================================
+
+# Minified files and source maps
+*.min.js
+*.min.css
+*.map
+
+# ==================================================
+# TESTING
+# ==================================================
+.nyc_output/
+playwright-report/
+test-results/
+coverage/
+
+# ==================================================
+# TEMPORARY FILES
+# ==================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*~
+
+# ==================================================
+# WINDOWS
+# ==================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+desktop.ini
+
+# ==================================================
+# MACOS
+# ==================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ==================================================
+# LINUX
+# ==================================================
+*~
+
+# ==================================================
+# IDE / EDITOR TEMPORARY FILES
+# ==================================================
+*.code-workspace.bak
+*.sublime-workspace
+*.sublime-project

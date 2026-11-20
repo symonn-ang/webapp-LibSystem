@@ -1,0 +1,37 @@
+@apiAddress = http://localhost:5152
+
+# <<<<<<<Member Section>>>>>>>
+GET {{apiAddress}}/api/Members/GetAllMembers/
+Accept: application/json
+###
+
+GET {{apiAddress}}/api/Members/GetMember/2
+Accept: application/json
+###
+
+POST {{apiAddress}}/api/Members/AddMember/
+Content-Type: application/json
+{
+  "memberID": 4,
+  "name": "Sara",
+  "email": "sara@gmail.com"
+}
+
+###
+DELETE {{apiAddress}}/api/Members/DeleteMember/2
+Accept: application/json
+
+### <<<<<<<Books Section>>>>>>>
+
+GET {{apiAddress}}/api/Books/GetAllBooks/
+Accept: application/json
+
+###
+GET {{apiAddress}}/api/Books/GetBook/2
+Accept: application/json
+
+###
+GET {{apiAddress}}/weatherforecast/
+Accept: application/json
+
+###

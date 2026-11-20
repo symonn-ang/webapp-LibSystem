@@ -1,0 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace api.Models
+{
+    public class Loan
+    {
+        public int LoanID { get; set; }
+        public int BookID { get; set; }
+        [ForeignKey(nameof(BookID))]
+        public Book Book { get; set; } = null!;
+        public int MemberID { get; set; }
+        [ForeignKey(nameof(MemberID))]
+        public Member Member { get; set; } = null!;
+        public DateOnly LoanDate { get; set; }
+        public DateOnly? ReturnDate { get; set; }
+    }
+}
