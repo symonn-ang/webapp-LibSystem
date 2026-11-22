@@ -12,7 +12,16 @@ Accept: application/json
 POST {{apiAddress}}/api/Members/AddMember/
 Content-Type: application/json
 {
-  "memberID": 4,
+  "name": "Steve",
+  "email": "steve@gmail.com"
+}
+
+###
+
+PUT {{apiAddress}}/api/Members/EditMember/2
+Content-Type: application/json
+{
+  "memberID": 2,
   "name": "Sara",
   "email": "sara@gmail.com"
 }
@@ -28,6 +37,33 @@ Accept: application/json
 
 ###
 GET {{apiAddress}}/api/Books/GetBook/2
+Accept: application/json
+
+###
+
+POST {{apiAddress}}/api/Books/AddBook/
+Content-Type: application/json
+{
+    "title": "Code of the Archipelago",
+    "author": "Mateo Reyes",
+    "description": "A gripping mystery set across the islands of the Philippines, following a software engineer tracing a vanished digital fortune.",
+    "availableCopies": 2
+}
+
+###
+
+PUT {{apiAddress}}/api/Books/EditBook/2
+Content-Type: application/json
+{
+  "bookID": 2,
+  "title": "The Silent Archive",
+  "author": "Elena Vance",
+  "description": "check"
+}
+
+###
+
+DELETE {{apiAddress}}/api/Books/DeleteBook/2
 Accept: application/json
 
 ###

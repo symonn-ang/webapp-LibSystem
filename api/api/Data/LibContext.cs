@@ -20,6 +20,20 @@ namespace api.Data
             modelBuilder.Entity<Loan>()
                 .Property(l => l.LoanDate)
                 .HasDefaultValueSql("CONVERT(date, GETDATE())");
+
+            modelBuilder.Entity<BookArchive>()
+                .Property(b => b.DeletedAt)
+                .HasDefaultValueSql("CONVERT(date, GETDATE())");
+
+            modelBuilder.Entity<Member>()
+                .HasIndex(l => l.Email)
+                .IsUnique();
+
+            // TODO check ^^^
+            //modelBuilder.Entity<Loan>()
+            //    .HasIndex(l => new { l.MemberID, l.BookID })
+            //    .IsUnique();
+
         }
     }
 }
