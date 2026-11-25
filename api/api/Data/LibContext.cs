@@ -29,7 +29,14 @@ namespace api.Data
                 .HasIndex(l => l.Email)
                 .IsUnique();
 
-            // TODO check ^^^
+            // for trigs
+            modelBuilder.Entity<Book>()
+                .ToTable("Books", tb => tb.UseSqlOutputClause(false));
+
+            modelBuilder.Entity<Loan>()
+                .ToTable("Loans", tb => tb.UseSqlOutputClause(false));
+
+            // TODO check
             //modelBuilder.Entity<Loan>()
             //    .HasIndex(l => new { l.MemberID, l.BookID })
             //    .IsUnique();
