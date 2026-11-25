@@ -51,8 +51,8 @@ namespace api.Controllers
                 return BadRequest();
             }
 
-            //TODO check error handlomg later
-            if (await MemberExists(member.MemberID))
+            //TODO check error handlomg later memberID is 0 cause efcore handles it later
+            if (await _context.Members.AnyAsync(m => m.Email == member.Email))
                 return Conflict("Email already exists.");
 
             _context.Members.Add(member);

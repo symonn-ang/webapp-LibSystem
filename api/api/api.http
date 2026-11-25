@@ -1,6 +1,39 @@
 @apiAddress = http://localhost:5152
 
-# <<<<<<<Member Section>>>>>>>
+
+### <<<<<<<Loan Section>>>>>>>
+GET {{apiAddress}}/api/Loans/
+Accept: application/json
+
+###
+GET {{apiAddress}}/api/Loans/1
+Accept: application/json
+
+###
+POST {{apiAddress}}/api/Loans
+Content-Type: application/json
+
+{
+  "bookID": 1,
+  "memberID": 1,
+  "returnDate": null
+}
+
+###
+PUT {{apiAddress}}/api/Loans/1
+Content-Type: application/json
+
+{
+  "loanID": 1,
+  "bookID": 1,
+  "memberID": 1,
+  "returnDate": null
+}
+
+###
+DELETE {{apiAddress}}/api/Loans/1
+
+### <<<<<<<Member Section>>>>>>>
 GET {{apiAddress}}/api/Members/GetAllMembers/
 Accept: application/json
 ###
@@ -36,7 +69,7 @@ GET {{apiAddress}}/api/Books/GetAllBooks/
 Accept: application/json
 
 ###
-GET {{apiAddress}}/api/Books/GetBook/2
+GET {{apiAddress}}/api/Books/GetBook/1
 Accept: application/json
 
 ###
@@ -44,21 +77,21 @@ Accept: application/json
 POST {{apiAddress}}/api/Books/AddBook/
 Content-Type: application/json
 {
-    "title": "Code of the Archipelago",
-    "author": "Mateo Reyes",
-    "description": "A gripping mystery set across the islands of the Philippines, following a software engineer tracing a vanished digital fortune.",
-    "availableCopies": 2
+    "title": "Code of the Geass",
+    "author": "Rurushu",
+    "availableCopies": 5
 }
 
 ###
 
-PUT {{apiAddress}}/api/Books/EditBook/2
+PUT {{apiAddress}}/api/Books/EditBook/1
 Content-Type: application/json
 {
-  "bookID": 2,
+  "bookID": 1,
   "title": "The Silent Archive",
   "author": "Elena Vance",
-  "description": "check"
+  "description": "check",
+  "availableCopies": 10
 }
 
 ###

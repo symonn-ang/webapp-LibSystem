@@ -52,10 +52,10 @@ namespace api.Controllers
                 return BadRequest();
             }
 
-            if (await BookExist(book.BookID))
-            {
-                return Conflict("Book already exists.");
-            }
+            //if (await BookExist(book.BookID))
+            //{
+            //    return Conflict("Book already exists.");
+            //}
 
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
@@ -66,20 +66,23 @@ namespace api.Controllers
         [HttpPut("EditBook/{id:int}")]
         public async Task<IActionResult> EditBook([FromRoute] int id, [FromBody] Book updatedBook)
         {
-            var book = await _context.Books.FindAsync(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
+            //var book = await _context.Books.FindAsync(id);
+            //if (book == null)
+            //{
+            //    return NotFound();
+            //}
 
             if (id != updatedBook.BookID)
             {
                 return BadRequest();
             }
 
-            book.Title = updatedBook.Title;
-            book.Author = updatedBook.Author;
-            book.Description = updatedBook.Description;
+            //book.Title = updatedBook.Title;
+            //book.Author = updatedBook.Author;   
+            //book.Description = updatedBook.Description;
+            //book.AvailableCopies = updatedBook.AvailableCopies;
+
+            _context.Entry(updatedBook).State = EntityState.Modified;
 
             try
             {
